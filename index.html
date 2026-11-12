@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prashanth Dharavath — Portfolio</title>
+  <meta name="description" content="Prashanth Dharavath — Software Engineer (Java, Spring Boot, Oracle PL/SQL, Microservices, GenAI). Projects, experience and résumé." />
+  <meta property="og:title" content="Prashanth Dharavath — Portfolio" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b0d10'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='16' font-weight='700' fill='%237cf0c5'>PD</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo" aria-label="Home"><span class="accent">&lt;</span>PD<span class="accent">/&gt;</span></a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="btn btn-sm">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero wrap">
+      <p class="mono kicker reveal">Hi, my name is</p>
+      <h1 class="reveal" data-bind="name"></h1>
+      <h2 class="reveal muted" data-bind="role"></h2>
+      <p class="lead reveal" data-bind="tagline"></p>
+      <div class="cta reveal">
+        <a href="#projects" class="btn">View my work</a>
+        <a id="resume-btn" class="btn btn-ghost" target="_blank" rel="noopener" hidden>Résumé</a>
+        <a id="gh-btn" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="stats reveal" id="stats" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="wrap section">
+      <h3 class="section-title reveal"><span class="mono accent">01.</span> About</h3>
+      <div class="about-grid">
+        <div class="about-text reveal" id="about-text"></div>
+        <div class="avatar reveal">
+          <img id="avatar" alt="Profile photo" width="240" height="240" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="wrap section">
+      <h3 class="section-title reveal"><span class="mono accent">02.</span> Skills</h3>
+      <div class="skills" id="skills-list"></div>
+    </section>
+
+    <section id="projects" class="wrap section">
+      <h3 class="section-title reveal"><span class="mono accent">03.</span> Projects</h3>
+      <div class="featured" id="featured"></div>
+      <h4 class="sub reveal">More on GitHub</h4>
+      <p class="muted reveal">Pulled live from my GitHub.</p>
+      <div class="filters reveal" id="filters" role="tablist" aria-label="Filter by language"></div>
+      <div class="grid" id="projects-grid">
+        <div class="card skeleton"></div><div class="card skeleton"></div><div class="card skeleton"></div>
+      </div>
+      <p class="center reveal"><a id="all-repos" class="link" target="_blank" rel="noopener">See all repositories ↗</a></p>
+    </section>
+
+    <section id="experience" class="wrap section">
+      <h3 class="section-title reveal"><span class="mono accent">04.</span> Experience</h3>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <section id="education" class="wrap section">
+      <h3 class="section-title reveal"><span class="mono accent">05.</span> Education &amp; Achievements</h3>
+      <div class="edu-grid">
+        <div id="education-list"></div>
+        <ul class="ach" id="achievements"></ul>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap section contact">
+      <p class="mono accent reveal">06. What's next?</p>
+      <h3 class="big reveal">Get in touch</h3>
+      <p class="muted reveal">I'm open to backend and full-stack opportunities and collaborations. My inbox is always open — I'll get back to you.</p>
+      <div class="cta center reveal" id="contact-links"></div>
+    </section>
+  </main>
+
+  <footer class="wrap footer mono">
+    <span>© <span id="year"></span> <span data-bind="name"></span></span>
+    <span>Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
